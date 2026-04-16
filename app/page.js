@@ -7,7 +7,7 @@ import HomelieTab from "../components/tabs/HomelieTab";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState("lectures");
-  const [date, setDate] = useState(today());
+  const [date, setDate] = useState("2026-04-19");
 
   return (
     <div className="h-screen flex flex-col max-w-xl mx-auto overflow-hidden">
