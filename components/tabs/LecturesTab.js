@@ -2,30 +2,19 @@
 import { useState, useEffect } from "react";
 import { formatDateFR, addDays, today } from "../../data/mockData";
 import ReadingCard from "../ReadingCard";
-import CommentaireCard from "../CommentaireCard";
 
-export default function LecturesTab() {
-  const [date, setDate] = useState(today());
+export default function LecturesTab({ date, onDateChange }) {
   const [content, setContent] = useState(null);
   const [loading, setLoading] = useState(true);
-
   const isToday = date === today();
 
   useEffect(() => {
     setLoading(true);
     setContent(null);
-
-    Promise.all([
-      fetch(`/api/messe?date=${date}`).then(r => r.json()),
-      fetch(`/api/commentaire?date=${date}`).then(r => r.json()),
-    ])
-      .then(([messe, commentaireData]) => {
-        if (messe.error) return;
-        setContent({
-          ...messe,
-          commentaire: commentaireData.error ? null : commentaireData.commentaire,
-          commentaireSource: commentaireData.source || null,
-        });
+    fetch(`/api/messe?date=${date}`)
+      .then((r) => r.json())
+      .then((messe) => {
+        if (!messe.error) setContent(messe);
       })
       .catch(() => {})
       .finally(() => setLoading(false));
@@ -36,7 +25,7 @@ export default function LecturesTab() {
       {/* Date Navigator */}
       <div className="flex items-center justify-between px-5 py-3 border-b border-[#E8D9B5] bg-white">
         <button
-          onClick={() => setDate(addDays(date, -1))}
+          onClick={() => onDateChange(addDays(date, -1))}
           className="text-3xl text-cardinal px-2 leading-none hover:opacity-70"
         >
           ‹
@@ -52,7 +41,7 @@ export default function LecturesTab() {
           )}
         </div>
         <button
-          onClick={() => setDate(addDays(date, 1))}
+          onClick={() => onDateChange(addDays(date, 1))}
           className="text-3xl text-cardinal px-2 leading-none hover:opacity-70"
         >
           ›
@@ -71,7 +60,6 @@ export default function LecturesTab() {
             <p className="text-xs font-semibold text-[#8B6A3E] uppercase tracking-wider mb-4">
               {content.liturgie}
             </p>
-
             {content.lecture && (
               <ReadingCard
                 title="Lecture"
@@ -80,7 +68,6 @@ export default function LecturesTab() {
                 color="cardinal"
               />
             )}
-
             {content.evangile && (
               <ReadingCard
                 title="Évangile"
@@ -89,21 +76,11 @@ export default function LecturesTab() {
                 color="navy"
               />
             )}
-
-            {content.commentaire && (
-              <CommentaireCard
-                label="Homélie"
-                sections={content.commentaire.sections}
-                text={typeof content.commentaire === 'string' ? content.commentaire : null}
-              />
-            )}
           </>
         ) : (
           <div className="text-center py-20">
             <p className="text-4xl mb-4">✝</p>
-            <p className="text-lg font-semibold text-brown mb-2">
-              Pas encore de contenu
-            </p>
+            <p className="text-lg font-semibold text-brown mb-2">Pas encore de contenu</p>
             <p className="text-sm text-[#8B6A3E]">
               Le contenu pour ce jour sera disponible prochainement.
             </p>
