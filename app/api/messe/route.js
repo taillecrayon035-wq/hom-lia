@@ -1,13 +1,5 @@
 import { NextResponse } from 'next/server';
-import { existsSync, readFileSync } from 'fs';
-import { join } from 'path';
-
-const LOCAL_FILE = join(process.cwd(), 'data', 'lectures-locales.json');
-
-function loadLocal() {
-  if (!existsSync(LOCAL_FILE)) return {};
-  return JSON.parse(readFileSync(LOCAL_FILE, 'utf-8'));
-}
+import lecturesLocales from '../../../data/lectures-locales.json';
 
 function stripHtml(html) {
   return html
@@ -35,7 +27,7 @@ export async function GET(request) {
   }
 
   // Données locales en priorité (demo / dates futures)
-  const local = loadLocal()[date];
+  const local = lecturesLocales[date];
   if (local) {
     return NextResponse.json({
       liturgie: local.liturgie || '',
@@ -67,7 +59,6 @@ export async function GET(request) {
     const lecture1 = lectures.find(l => l.type === 'lecture_1');
     const evangile = lectures.find(l => l.type === 'evangile');
 
-    // Lecture patristique (Office des lectures)
     let patristique = null;
     if (lecturesRes.ok) {
       const lecturesData = await lecturesRes.json();

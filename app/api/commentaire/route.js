@@ -1,13 +1,5 @@
 import { NextResponse } from 'next/server';
-import { existsSync, readFileSync } from 'fs';
-import { join } from 'path';
-
-const DB_FILE = join(process.cwd(), 'data', 'commentaires.json');
-
-function loadDb() {
-  if (!existsSync(DB_FILE)) return {};
-  return JSON.parse(readFileSync(DB_FILE, 'utf-8'));
-}
+import commentaires from '../../../data/commentaires.json';
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
@@ -17,8 +9,7 @@ export async function GET(request) {
     return NextResponse.json({ error: 'date invalide' }, { status: 400 });
   }
 
-  const db = loadDb();
-  const entry = db[date];
+  const entry = commentaires[date];
 
   if (!entry) {
     return NextResponse.json({ error: 'Commentaire non disponible' }, { status: 404 });
@@ -32,7 +23,7 @@ export async function GET(request) {
     });
   }
 
-  // Ancien format (rétrocompatibilité)
+  // Ancien format
   return NextResponse.json({
     evangile: entry.sections ? { sections: entry.sections } : entry.commentaire,
     lecture: null,
