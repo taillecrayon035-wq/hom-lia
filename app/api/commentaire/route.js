@@ -18,14 +18,23 @@ export async function GET(request) {
   }
 
   const db = loadDb();
+  const entry = db[date];
 
-  if (db[date]) {
+  if (!entry) {
+    return NextResponse.json({ error: 'Commentaire non disponible' }, { status: 404 });
+  }
+
+  // Nouveau format : { lecture: { sections }, evangile: { sections } }
+  if (entry.lecture || entry.evangile) {
     return NextResponse.json({
-      commentaire: db[date].sections
-        ? { sections: db[date].sections }
-        : db[date].commentaire,
+      lecture: entry.lecture || null,
+      evangile: entry.evangile || null,
     });
   }
 
-  return NextResponse.json({ error: 'Commentaire non disponible' }, { status: 404 });
+  // Ancien format (rétrocompatibilité)
+  return NextResponse.json({
+    evangile: entry.sections ? { sections: entry.sections } : entry.commentaire,
+    lecture: null,
+  });
 }
