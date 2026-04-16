@@ -1,5 +1,13 @@
 import { NextResponse } from 'next/server';
-import { CONTENT } from '../../../data/mockData.js';
+import { existsSync, readFileSync } from 'fs';
+import { join } from 'path';
+
+const LOCAL_FILE = join(process.cwd(), 'data', 'lectures-locales.json');
+
+function loadLocal() {
+  if (!existsSync(LOCAL_FILE)) return {};
+  return JSON.parse(readFileSync(LOCAL_FILE, 'utf-8'));
+}
 
 function stripHtml(html) {
   return html
@@ -27,7 +35,7 @@ export async function GET(request) {
   }
 
   // Données locales en priorité (demo / dates futures)
-  const local = CONTENT[date];
+  const local = loadLocal()[date];
   if (local) {
     return NextResponse.json({
       liturgie: local.liturgie || '',
