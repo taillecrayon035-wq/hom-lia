@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
-import { formatDateFR, today } from "../../data/mockData";
 import QuizCard from "../QuizCard";
 
 const CONFETTI_COLORS = ["#C9A84C", "#8B1A1A", "#1A4A8B", "#7BA968", "#E8D9B5"];
@@ -107,7 +106,6 @@ export default function QuizzTab({ date }) {
   const [step, setStep] = useState(0);
   const [score, setScore] = useState(0);
   const [done, setDone] = useState(false);
-  const isToday = date === today();
 
   useEffect(() => {
     setLoading(true);
@@ -133,18 +131,7 @@ export default function QuizzTab({ date }) {
 
   return (
     <div className="flex flex-col h-full">
-      <div className="px-5 py-3 border-b border-[#E8D9B5] bg-white">
-        <div className="text-center">
-          <p className="text-sm font-semibold text-brown capitalize">{formatDateFR(date)}</p>
-          {isToday && (
-            <p className="text-[11px] uppercase tracking-wider text-cardinal font-medium mt-0.5">
-              Aujourd'hui
-            </p>
-          )}
-        </div>
-      </div>
-
-      <div className="flex-1 overflow-y-auto px-4 py-5 pb-4">
+      <div className="flex-1 overflow-y-auto px-4 pt-6 pb-4">
         {loading ? (
           <div className="text-center py-20">
             <p className="text-4xl mb-4">✝</p>
