@@ -26,6 +26,30 @@ const TABS = [
       </svg>
     ),
   },
+  {
+    id: "quizz",
+    label: "Quiz",
+    icon: (active) => (
+      <svg
+        viewBox="0 0 24 24"
+        className="w-6 h-6"
+        fill={active ? "currentColor" : "none"}
+        stroke="currentColor"
+        strokeWidth={active ? 0 : 1.8}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <circle cx="12" cy="12" r="9" />
+        <path
+          d="M9.4 9.2c0-1.6 1.2-2.8 2.8-2.8s2.8 1.2 2.8 2.8c0 1.4-1 2-1.9 2.6-.7.5-1 1-1 1.7"
+          fill="none"
+          stroke={active ? "#F5EFE6" : "currentColor"}
+          strokeWidth="1.8"
+        />
+        <circle cx="12.1" cy="17.2" r="1.05" fill={active ? "#F5EFE6" : "currentColor"} stroke="none" />
+      </svg>
+    ),
+  },
 ];
 
 export default function BottomNav({ active, onChange }) {

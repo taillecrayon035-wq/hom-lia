@@ -1,0 +1,65 @@
+{
+  "2026-05-18": {
+    "ref": "Jn 16, 29-33",
+    "titre": "L'évangile en 1 minute",
+    "intro": "Quatre questions pour entrer dans l'évangile du jour et apprendre à mieux connaître Jésus.",
+    "questions": [
+      {
+        "id": "q1",
+        "type": "lecture",
+        "enonce": "Quelle phrase Jésus prononce-t-il à la fin de cet évangile ?",
+        "choix": [
+          "« Courage : moi, je suis vainqueur du monde. »",
+          "« Vous serez mes témoins jusqu'aux extrémités de la terre. »",
+          "« Je suis le pain vivant descendu du Ciel. »",
+          "« Femme, voici ton fils. »"
+        ],
+        "bonneReponse": 0,
+        "explication": "Cette parole — donnée avant la Croix — clôt le discours d'adieu du Jeudi saint. Jésus parle de sa victoire au passé alors que la Passion n'a pas encore eu lieu : c'est l'un des paradoxes les plus saisissants de l'évangile de Jean."
+      },
+      {
+        "id": "q2",
+        "type": "comprehension",
+        "enonce": "Quand Jésus dit « j'ai vaincu le monde », à quel moment se situe-t-il ?",
+        "choix": [
+          "Après sa Résurrection, devant les disciples réunis.",
+          "Avant la Passion, pendant son discours d'adieu.",
+          "Au moment de l'Ascension.",
+          "Dans la barque, après la pêche miraculeuse."
+        ],
+        "bonneReponse": 1,
+        "explication": "Jésus donne sa victoire pour acquise avant même d'entrer dans la Passion. Pour Jean, la Croix n'est pas une défaite suivie d'un triomphe : elle est elle-même le lieu où la victoire s'accomplit."
+      },
+      {
+        "id": "q3",
+        "type": "tradition",
+        "enonce": "Selon saint Augustin, quelle nuance les disciples confondent-ils encore ce soir-là ?",
+        "choix": [
+          "Foi et œuvres.",
+          "Amour et obéissance.",
+          "Croire « ce que Tu dis » et croire « en Toi ».",
+          "Connaissance et contemplation."
+        ],
+        "bonneReponse": 2,
+        "explication": "Dans ses Tractatus in Iohannem, Augustin distingue credere quae dicit (croire ce qu'Il dit) et credere in eum (croire en Lui). Les disciples en sont encore au premier niveau : ils savent, mais ils ne font pas encore pleinement confiance. La Pentecôte fera la différence."
+      },
+      {
+        "id": "q4",
+        "type": "application",
+        "enonce": "Que change concrètement la victoire du Christ pour notre quotidien ?",
+        "choix": [
+          "Elle supprime les épreuves de celui qui croit.",
+          "Elle reporte toute paix à la vie après la mort.",
+          "Elle nous met à l'écart du monde et de ses contradictions.",
+          "Elle nous donne, au cœur de l'épreuve, de quoi tenir et de quoi donner."
+        ],
+        "bonneReponse": 3,
+        "explication": "La victoire du Christ ne supprime pas nos difficultés : elle les traverse. Elle change ce qui se passe au-dedans de celui qui les vit, et nous rend capables d'aimer même là — par un mot, une attention, une prière."
+      }
+    ],
+    "conclusion": {
+      "titre": "Courage : Il a vaincu le monde",
+      "texte": "Tu viens de parcourir l'évangile du jour. Retiens ces deux choses : la foi qu'on récite cède à la première difficulté — la confiance, elle, l'Esprit la construit jour après jour. Et la victoire du Christ ne t'épargne pas l'épreuve : elle te donne, au milieu, de quoi tenir et de quoi donner."
+    }
+  }
+}

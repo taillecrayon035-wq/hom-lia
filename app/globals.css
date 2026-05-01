@@ -5,3 +5,41 @@
 html, body {
   background-color: #F5EFE6;
 }
+
+@keyframes quiz-pop {
+  0%   { transform: scale(0.4); opacity: 0; }
+  55%  { transform: scale(1.25); opacity: 1; }
+  80%  { transform: scale(0.92); }
+  100% { transform: scale(1); }
+}
+.animate-quiz-pop { animation: quiz-pop 480ms cubic-bezier(0.2, 0.9, 0.3, 1.2) both; }
+
+@keyframes quiz-shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(3px); }
+}
+.animate-quiz-shake { animation: quiz-shake 360ms ease-in-out 1; }
+
+@keyframes quiz-sparkle {
+  0%   { transform: translate(0, 0) scale(0); opacity: 0; }
+  30%  { opacity: 1; }
+  100% { transform: translate(var(--sx, 0), var(--sy, -24px)) scale(1.4); opacity: 0; }
+}
+.animate-quiz-sparkle { animation: quiz-sparkle 700ms ease-out forwards; }
+
+@keyframes quiz-fade-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-quiz-fade-up { animation: quiz-fade-up 320ms ease-out both; }
+
+@keyframes quiz-confetti {
+  0%   { transform: translate(0, -10px) rotate(0deg); opacity: 0; }
+  10%  { opacity: 1; }
+  100% { transform: translate(var(--cx, 0), 220px) rotate(540deg); opacity: 0; }
+}
+.animate-quiz-confetti { animation: quiz-confetti 2200ms ease-in forwards; }
+
