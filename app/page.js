@@ -4,6 +4,7 @@ import BottomNav from "../components/BottomNav";
 import LecturesTab from "../components/tabs/LecturesTab";
 import HomelieTab from "../components/tabs/HomelieTab";
 import QuizzTab from "../components/tabs/QuizzTab";
+import FilTab from "../components/tabs/FilTab";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState("lectures");
@@ -17,6 +18,7 @@ export default function App() {
         )}
         {activeTab === "homelie" && <HomelieTab date={date} />}
         {activeTab === "quizz" && <QuizzTab date={date} />}
+        {activeTab === "fil" && <FilTab date={date} />}
       </div>
       <BottomNav active={activeTab} onChange={setActiveTab} />
     </div>

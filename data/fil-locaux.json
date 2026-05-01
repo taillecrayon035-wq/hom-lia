@@ -1,0 +1,73 @@
+{
+  "2026-05-18": {
+    "posts": [
+      {
+        "id": "p1",
+        "auteur": "Marie-Claire",
+        "initiales": "MC",
+        "couleur": "cardinal",
+        "timeAgo": "il y a 2 h",
+        "texte": "Reçue cette parole comme une gifle douce ce matin : « Maintenant vous croyez ? » Je crois en récitant. Pas en confiance. La Pentecôte arrive vite, j'en ai besoin.",
+        "likes": 23,
+        "liked": false,
+        "commentaires": [
+          { "id": "c11", "auteur": "François", "initiales": "FR", "couleur": "navy", "timeAgo": "il y a 1 h", "texte": "Tellement vrai. La récitation lâche à la première galère." },
+          { "id": "c12", "auteur": "Lucie", "initiales": "LU", "couleur": "cardinal", "timeAgo": "il y a 45 min", "texte": "Idem. Le travail de la Pentecôte commence dès maintenant, je crois." },
+          { "id": "c13", "auteur": "Père Jean", "initiales": "PJ", "couleur": "gold", "timeAgo": "il y a 30 min", "texte": "Beau cri. Garde-le pour la neuvaine qui s'ouvre." }
+        ]
+      },
+      {
+        "id": "p2",
+        "auteur": "Cécile",
+        "initiales": "CE",
+        "couleur": "cardinal",
+        "timeAgo": "il y a 4 h",
+        "texte": "« Courage. Moi, je suis vainqueur du monde. » Le Christ le dit avant la Croix. Ça me retourne à chaque fois que je relis ce passage.",
+        "likes": 41,
+        "liked": false,
+        "commentaires": [
+          { "id": "c21", "auteur": "Hélène", "initiales": "HE", "couleur": "navy", "timeAgo": "il y a 3 h", "texte": "Cette phrase a tout changé pour moi cette année." },
+          { "id": "c22", "auteur": "Thomas", "initiales": "TH", "couleur": "cardinal", "timeAgo": "il y a 2 h", "texte": "Le mot « courage » au sens étymologique : cor + agere, prendre force au cœur. Une étymo qui m'a marqué." }
+        ]
+      },
+      {
+        "id": "p3",
+        "auteur": "Antoine",
+        "initiales": "AN",
+        "couleur": "navy",
+        "timeAgo": "il y a 5 h",
+        "texte": "Saint Augustin et la distinction credere quae dicit / credere in eum, je ne connaissais pas. Pour moi qui ai grandi au caté sans creuser, ça remet beaucoup de choses en place.",
+        "likes": 17,
+        "liked": false,
+        "commentaires": [
+          { "id": "c31", "auteur": "Sœur Bénédicte", "initiales": "SB", "couleur": "gold", "timeAgo": "il y a 4 h", "texte": "Augustin a passé sa vie à creuser cette distinction. Tu es au bon endroit pour commencer." }
+        ]
+      },
+      {
+        "id": "p4",
+        "auteur": "Pierre-Yves",
+        "initiales": "PY",
+        "couleur": "navy",
+        "timeAgo": "hier",
+        "texte": "Période compliquée au boulot ces dernières semaines. Lire ce passage ce matin m'a rappelé que la victoire du Christ ne supprime pas l'épreuve, elle la traverse. Merci pour cet espace.",
+        "likes": 56,
+        "liked": false,
+        "commentaires": [
+          { "id": "c41", "auteur": "Anne-Sophie", "initiales": "AS", "couleur": "cardinal", "timeAgo": "hier", "texte": "On prie pour toi PY. Tiens bon." },
+          { "id": "c42", "auteur": "Marie-Claire", "initiales": "MC", "couleur": "cardinal", "timeAgo": "hier", "texte": "Merci de ton honnêteté, ça nous fait du bien à tous." }
+        ]
+      },
+      {
+        "id": "p5",
+        "auteur": "Anne-Sophie",
+        "initiales": "AS",
+        "couleur": "cardinal",
+        "timeAgo": "il y a 1 h",
+        "texte": "Question qui me reste après ce commentaire : qu'est-ce qui me fait vraiment passer du « savoir » à « la confiance » ? Chez moi, c'est seulement les épreuves traversées avec Lui. Pas la lecture, même bonne.",
+        "likes": 9,
+        "liked": false,
+        "commentaires": []
+      }
+    ]
+  }
+}

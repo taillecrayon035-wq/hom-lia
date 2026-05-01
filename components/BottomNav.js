@@ -50,6 +50,23 @@ const TABS = [
       </svg>
     ),
   },
+  {
+    id: "fil",
+    label: "Fil",
+    icon: (active) => (
+      <svg
+        viewBox="0 0 24 24"
+        className="w-6 h-6"
+        fill={active ? "currentColor" : "none"}
+        stroke="currentColor"
+        strokeWidth={active ? 0 : 1.8}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-4.4A8 8 0 1 1 21 12z" />
+      </svg>
+    ),
+  },
 ];
 
 export default function BottomNav({ active, onChange }) {
